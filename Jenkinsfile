@@ -6,7 +6,7 @@
 
 xplatformBuildAndRunTests {
 	winNodeSpec = 'windows && vs2019 && netcore3.1'
-	linuxNodeSpec = 'linux64 && !packager && ubuntu && mono6 && !focal'
+	linuxNodeSpec = 'linux64 && !packager && ubuntu && mono6'
 	winTool = 'msbuild16'
 	linuxTool = 'mono-msbuild15'
 	configuration = 'Release'

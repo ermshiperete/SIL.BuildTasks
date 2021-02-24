@@ -14,6 +14,7 @@
 		<TeamCity Condition="'$(teamcity_version)' != ''">true</TeamCity>
 		<TeamCity Condition="'$(teamcity_version)' == ''">false</TeamCity>
 		<TestOutputXmlFile Condition="'$(teamcity_version)' == ''">$(RootDir)/output/$(Configuration)/TestResults.xml</TestOutputXmlFile>
+		<Language>C#</Language> <!-- HACK: This is a workaround for https://github.com/GitTools/GitVersion/issues/2591 -->
 	</PropertyGroup>
 
 	<UsingTask TaskName="NUnit3" AssemblyFile="$(RootDir)/output/$(Configuration)/net461/SIL.BuildTasks.dll" />
